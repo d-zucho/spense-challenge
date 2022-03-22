@@ -1,4 +1,9 @@
 .toggle {
+  display: block;
+}
+
+.header__navMenu,
+.header__loginMenu {
   display: none;
 }
 
@@ -45,52 +50,36 @@
   }
 }
 
-@media screen and (max-width: 769px) {
-  .header__navbar {
-    margin: 2rem 0;
-    border: 1px solid black;
-    justify-content: flex-end;
-    transition: 0.3s ease all;
-  }
+// Small devices (landscape phones, 576px and up)
 
-  .header__logo {
-    margin-right: auto;
-  }
-
-  .header__links {
-    gap: 1rem;
-  }
-  .header__linkItem {
-    text-decoration: none;
-    color: #000;
-  }
-
-  .header__btn--light {
-    border: 1px solid black;
-    background: none;
-    cursor: pointer;
-    margin: 0 1rem;
-
-    &:hover {
-      border: 1px solid black;
-    }
-  }
-
-  .header__btn--dark {
-    padding: 12px;
-    border-radius: 8px;
-    color: white;
-    background-color: black;
-  }
-}
-
-@media (min-width: 480px) {
-  .nav-toggler {
+@media (min-width: 576px) {
+  // Medium devices (tablets, 768px and up)
+  .toggle {
     display: none;
   }
-
   .header__navMenu,
   .header__loginMenu {
     display: block;
   }
+  .header__logo {
+    margin-right: auto;
+  }
+
+  @media (min-width: 768px) {
+    // Large devices (desktops, 992px and up)
+    .header__logo {
+      margin-right: 0;
+    }
+
+    @media (min-width: 992px) {
+    }
+  }
 }
+
+// Extra large devices (large desktops, 1200px and up)
+
+// @media (min-width: 1200px) {
+
+// #wrapper {width:90%;  margin: 0 auto; }
+
+// }

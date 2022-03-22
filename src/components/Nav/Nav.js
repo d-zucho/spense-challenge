@@ -1,6 +1,7 @@
-import { RiMenuFill } from 'react-icons/ri'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { IconContext } from 'react-icons'
-import './Nav.scss'
+import { ReactComponent as HamburgerMenu } from './Hamburger Menu.svg'
+import './NewNav.scss'
 
 const Nav = () => {
   const width = window.innerWidth
@@ -36,9 +37,7 @@ const Nav = () => {
         <button className='header__btn header__btn--light'>Login</button>
         <button className='header__btn header__btn--dark'>Get Started</button>
       </div>
-      <IconContext.Provider value={{ className: 'nav-toggler' }}>
-        <RiMenuFill />
-      </IconContext.Provider>
+      <HamburgerMenu className='toggle' />
     </div>
   )
 }
